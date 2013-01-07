@@ -12,14 +12,12 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet" href="webfontkit-20130104-123338/stylesheet.css">
-        <link rel="stylesheet" href="css/normalize.css">       
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="webfontkit-20130104-123338/stylesheet.css">       
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/bootstrap-responsive.css">
         <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/main.css.css">
+
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -27,55 +25,65 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
+        <div class="container">
         <div id="header">
             <div id="header-container">
                 <div id="logo">
                     <a href="#"><img src="img/wulff-electric.png"></a></img>
-                    <div id="company-name">
+                    <div id="company-name" class="brand">
                         <div id="wulff">Wulff Electric, Inc.</div>
-                        <div id="usp">Family owned in Omaha since 2000.</div>
+                        <div id="usp">Family owned in Omaha since 2000</div>
                     </div>
                 </div>
-                <div id="number"><a href="#">402.498.9585</a></div>
+                
+                
                 <div id="nav">
+                    <div id="number"><a href="#">402.498.9585</a></div>
                     <ul>
                         <li><a href="#">Who We Are</a></li>
                         <li><a href="#">Our Services</a></li>
                         <li><a href="#">Contact Us</a></li>
                     </ul>
-                </div>
+                </div>              
             </div>
         </div>
 
         <div id="wulffCarousel" class="carousel slide">
+        <h1 class="welcome">Welcome to Wulff Electric, Inc.</h1>
         <!-- Carousel items -->
-
-            <h1>Welcome to Wulff Electric, Inc.</h1>
-            <div class="carousel-inner">
-                <div class="active item">
-                    <img src="img/office_2.jpg">
+        <div class="carousel-inner">
+            <div class="active item" data-href="0">
+                <img src="img/office_2.jpg">
+                <div class="carousel-caption">
                     <h2 class="active-1">We are a full-service contracting company specializng in commercial work.</h2>
-                    <div class="intro-button"><div class="button-text">View Services</div></div>
-                </div>
-                <div class="item">
-                    <h2>We are a family business, locally-owned and opperated here in Omaha since 2000.</h2>
-                    <div class="intro-button"></div>
-                    <img src="img/office_1.jpg">
-                </div>
-                <div class="item">
-                    <h2>We are Master Electrician accredited and a Lighting Trade Ally with OPPD.</h2>
-                    <div class="intro-button">Learn More</div>
-                    <img src="img/office_2.jpg">
-                </div>
-                <div class="item">
-                    <h2>We work with homeowners to ensure a maxim return on their investment.</h2>
-                    <div class="intro-button">Learn More</div>
-                    <img src="img/office_1.jpg">
+                    <div class="intro-button">View Services</div>
                 </div>
             </div>
+            <div class="item" data-href="1">
+                <img src="img/office_2.jpg">
+                <div class="carousel-caption">
+                    <h2>We are a family business, locally-owned and operated here in Omaha since 2000.</h2>
+                    <div class="intro-button">Learn More</div>
+                </div>
+            </div>
+            <div class="item" data-href="2">
+                <img src="img/office_2.jpg">
+                <div class="carousel-caption">
+                    <h2>We are Master Electrician accredited and a Lighting Trade Ally with OPPD.</h2>
+                    <div class="intro-button">Learn More</div>
+                </div>
+            </div>
+            <div class="item" data-href="3">
+                <img src="img/office_2.jpg">
+                <div class="carousel-caption">
+                    <h2>We work with homeowners to ensure a maxim return on their investment.</h2>
+                    <div class="intro-button">Learn More</div>
+                </div>
+            </div>
+        </div>
         <!-- Carousel items -->
-            <a class="carousel-controls left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-            <a class="carousel-controls right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+        <a class="carousel-control left" href="#wulffCarousel" data-slide="prev">&lsaquo;</a>
+        <a class="carousel-control right" href="#wulffCarousel" data-slide="next">&rsaquo;</a>
         </div>
 
         <div id="who-we-are-container">
@@ -114,87 +122,96 @@
                
         <div id="services-clients">
             <div id="services-container">
-                <ol class="nav nav-pills">
-                    <li><a href="#services" data-toggle="tab">Services</a>
+                <ul class="nav nav-tabs" id="tabs">
+                  <li class="active"><a href="#services">Services</a></li>
+                  <li><a href="#clients">Clients</a></li>
+                </ul>
+                 
+                <div class="tab-content">
+                    <div class="tab-pane active" id="services">
                         <p class="customer-needs">The needs of every customer are important to us at Wulff Electric, Inc.<p class="customer-needs">These are just a few of the services we provide.</p></p> 
+                        <div class="row">
+                            <div id="commercial-container" class="span4">
+                                <div id="icon-commercial"><img src="img/serv_1.png"></div>
+                                <h3 class="service-type">Commercial</h3>
+                                <ul class="service-specific">
+                                    <li>Lot/Pole Lighting</li>
+                                    <li>Restaurants</li>
+                                    <li>Strip Malls</li>
+                                    <li>Business or Buildings</li>
+                                    <li>New and Existing</li>
+                                    <li>Expert Trouble Shooting</li>
+                                </ul>
+                            </div>
+                            <div id="data-container" class="span4">
+                                <div id="icon-data"><img src="img/serv_2.png"></div>
+                                <h3 class="service-type">Voice/Data/<br />Networking</h3>
+                                <p style="italics">Commercial Services Cont.</p>
+                                <ul class="service-specific">
+                                    <li>Trenching</li>
+                                    <li>Generators</li>
+                                    <li>Panel Upgrades</li>
+                                    <li>Inspections</li>
+                                    <li>Motor Controls</li>
+                                </ul>
+                            </div>
+                            <div id="residential-container" class="span4">
+                                <div id="icon-data"><img src="img/serv_3.png"></div>
+                                <h3 class="service-type">Residential</h3>
+                                <ul class="service-specific">
+                                    <li>Remodels</li>
+                                    <li>Additions</li>
+                                    <li>Basement Finishes</li>
+                                    <li>Kitchen Remodels</li>
+                                    <li>Panel Upgrades</li>
+                                    <li>Inspections</li>
+                                    <li>Code Compliance</li>
+                                    <li>Service Calls</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="clients">
                         
-                        <div id="commercial-container" class=".span4">
-                            <div id="icon-commercial"><img src="img/serv_1.png"></div>
-                            <h3 class="service-type">Commercial</h3>
-                            <ul class="service-specific">
-                                <li>Lot/Pole Lighting</li>
-                                <li>Restaurants</li>
-                                <li>Strip Malls</li>
-                                <li>Business or Buildings</li>
-                                <li>New and Existing</li>
-                                <li>Expert Trouble Shooting</li>
-                            </ul>
-                        </div>
-                        <div id="data-container" class=".span4">
-                            <div id="icon-data"><img src="img/serv_2.png"></div>
-                            <h3 class="service-type">Voice/Data/Networking</h3>
-                            <p style="italics">Commercial Services Cont.</p>
-                            <ul class="service-specific">
-                                <li>Trenching</li>
-                                <li>Generators</li>
-                                <li>Panel Upgrades</li>
-                                <li>Inspections</li>
-                                <li>Motor Controls</li>
-                            </ul>
-                        </div>
-                        <div id="residential-container" class=".span4">
-                            <div id="icon-data"><img src="img/serv_3.png"></div>
-                            <h3 class="service-type">Residential</h3>
-                            <ul class="service-specific">
-                                <li>Remodels</li>
-                                <li>Additions</li>
-                                <li>Basement Finishes</li>
-                                <li>Kitchen Remodels</li>
-                                <li>Panel Upgrades</li>
-                                <li>Inspections</li>
-                                <li>Code Compliance</li>
-                                <li>Service Calls</li>
-                            </ul>
-                        </div>
-                    </li>
-                </ol>
-            </div>
-            <div id="clients-container">
-                <ol class="nav nav-pills">
-                    <li><a href="#clients" data-toggle="tab">Clients</a>
-                        <ul class="client-specific">
                             <div class="accent-divider"></div>
-                            <div class=".span4">
-                                <li>Kwik Shop</li>
-                                <li>CVS Pharmacy</li>
-                                <li>Olive Garden Council Bluffs</li>
-                                <li>Granite City Food &amp; Brewery Lincoln</li>
-                                <li>First National Bank, Glenwood Iowa</li>
-                                <li>Taco Bell</li>
+                            <div class="span4">
+                                <ul class="client-specific">
+                                    <li>Kwik Shop</li>
+                                    <li>CVS Pharmacy</li>
+                                    <li>Olive Garden Council Bluffs</li>
+                                    <li>Granite City Food &amp; Brewery Lincoln</li>
+                                    <li>First National Bank, Glenwood IA</li>
+                                    <li>Taco Bell</li>
+                                </ul>
                             </div>
-                            <div class=".span4">
-                                <li>Taco Bueno</li>
-                                <li>Taco Johns</li>
-                                <li>Applebee's</li>
-                                <li>Village Inn</li>
-                                <li>Goldez Bar &amp; Grill</li>
-                                <li>Culvers</li>
+                            <div class="span4">
+                                <ul class="client-specific">
+                                    <li>Taco Bueno</li>
+                                    <li>Taco Johns</li>
+                                    <li>Applebee's</li>
+                                    <li>Village Inn</li>
+                                    <li>Goldez Bar &amp; Grill</li>
+                                    <li>Culvers</li>
+                                </ul>
                             </div>
-                            <div class=".span4">
-                                <li>Ulta</li>
-                                <li>Lane Bryant</li>
-                                <li>Delia’s</li>
-                                <li>Panera Bread</li>
-                                <li>Midwest Manufacturing Plant Valley, NE</li>
+                            <div class="span4">
+                                <ul class="client-specific">
+                                    <li>Ulta</li>
+                                    <li>Lane Bryant</li>
+                                    <li>Delia’s</li>
+                                    <li>Panera Bread</li>
+                                    <li>Midwest Manufacturing Plant Valley, NE</li>
+                                </ul>
                             </div>
                         </ul>
-                    </li>
-                </ol>
+                      </div>
+                    </div>
             </div>
         </div>
 
         <div id="contact">
-            <div id="map"><iframe width="100%" height="485" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=14623+Grover+Street,+Omaha,+NE&amp;daddr=&amp;hl=en&amp;geocode=&amp;aq=0&amp;oq=14623+Grover+Street,+Omaha+NE&amp;sll=41.500819,-99.680902&amp;sspn=10.026753,7.877197&amp;mra=ls&amp;ie=UTF8&amp;t=m&amp;ll=41.227668,-96.144748&amp;spn=0.015654,0.041199&amp;z=15&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=d&amp;source=embed&amp;saddr=14623+Grover+Street,+Omaha,+NE&amp;daddr=&amp;hl=en&amp;geocode=&amp;aq=0&amp;oq=14623+Grover+Street,+Omaha+NE&amp;sll=41.500819,-99.680902&amp;sspn=10.026753,7.877197&amp;mra=ls&amp;ie=UTF8&amp;t=m&amp;ll=41.227668,-96.144748&amp;spn=0.015654,0.041199&amp;z=15" style="color:#0000FF;text-align:left">View Larger Map</a></small></div>
+            <div id="map"><iframe width="100%" height="485" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=14623+Grover+Street,+Omaha,+NE&amp;daddr=&amp;hl=en&amp;geocode=&amp;aq=0&amp;oq=14623+Grover+Street,+Omaha+NE&amp;sll=41.500819,-99.680902&amp;sspn=10.026753,7.877197&amp;mra=ls&amp;ie=UTF8&amp;t=m&amp;ll=41.227668,-96.144748&amp;spn=0.015654,0.041199&amp;z=15&amp;output=embed"></iframe></div>
             <h2 class="contact">Contact</h2>
             <p class="all-caps">Wulff Electric, Inc.<p>14623 Grover Street | Omaha, NE 68144</p></p>
             <p class="all-caps">24 Hour Emergency service</p>
@@ -208,7 +225,7 @@
             <p id="legal">Wulff Electric, Inc. | 14623 Grover Street, Omaha NE | 402.498.9585 | All Rights Reserved</p>
         </div>
 
-
+        </div>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3.min.js"><\/script>')</script>

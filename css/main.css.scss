@@ -1,3 +1,6 @@
+$yellow: #fee600;
+$dGray: #414042;
+
 /*
  * HTML5 Boilerplate
  *
@@ -113,7 +116,7 @@ body {
 
 h1, h2, h3, p, ul, li, a {
 	text-align: center;
-	color: #414042;
+	color: $dGray;
 }
 
 h1, h2, h3 {
@@ -126,44 +129,49 @@ h1, h3 {
 	letter-spacing: 5px;
 }
 
+.container {
+	width:100%;
+	max-width: 1100px;
+	margin: 0 auto;
+	border: 1px solid black;
+}
 
 /* Header Content ----------------------------------------------------------- */
 
 #header {
-	height: 120px;
 	width: 100%;
-	background-color: #414042;
+	background-color: $dGray;
 }
 
 #header-container {
 	width: 90%;
 	max-width: 960px;
 	margin: 0 auto;
+	padding: .5em 0;
+	overflow:hidden;
 }
 
-#logo img {
+#logo {
+	width:auto;
 	float: left;
-	height: 100px;
-	padding: 10px 15px 0 0;
+	overflow: hidden;
+
+	img {
+		float: left;
+		height: 100px;
+		padding: 10px 15px 0 0;
+	}
 }
 
 #company-name {
 	float: left;
-	padding: 26px 41px 0 0;
-}
-
-.active-item {
-	position: relative;
-}
-
-.active-1 {
-	position: absolute;
+	padding: 26px 0 0;
 }
 
 #wulff {
 	font-family: 'aller_lightregular', sans-serif;
 	font-size: 2em;
-	color: #fee600;
+	color: white;
 }
 
 #usp {
@@ -174,22 +182,27 @@ h1, h3 {
 }
 
 #number {
-	padding-top: 46px;
-	float: left;
-}
-
-#number a {
-	font-family: 'allerbold', sans-serif;
-	font-size: 1.75em;
-	color: #fee600;
-	text-decoration: none;
+	clear: right;
+	float: right;
+	padding: 0 0 1em;
+	a {
+		font-family: 'allerbold', sans-serif;
+		font-size: 1.75em;
+		color: $yellow;
+		text-decoration: none;
+	}
 }
 
 #nav {
-	padding-top: 61px;
+	display: block;	
+	overflow: hidden;
+	padding: .5em 0 0;
 }
 
 #nav ul {
+	display: block;
+	float:right;
+	clear:right;
 	float: right;
 }
 
@@ -199,7 +212,7 @@ h1, h3 {
 	font-family: 'allerbold', sans-serif;
 	font-size: 1em;
 	list-style-type: none;
-	color: #fee600;
+	color: $yellow;
 }
 
 #nav > ul > li:nth-child(3n) {
@@ -216,19 +229,22 @@ h1, h3 {
 }
 
 /* Carousel Container ----------------------------------------------------------- */
-
-.carousel-inner {
-	width: 100%;
-	height: 425px;
+.welcome {
+	display: block;
+	position: absolute;
+	top:2em;
+	left:0;
+	z-index: 1;
+	width:100%;
+	text-align: center;
 }
+.carousel-inner {
+	height: 500px;
+}
+
 
 h1 {
 	font-size: 1.375em;
-	color: #fff;
-}
-
-h2 {
-	font-size: 4.0625em;
 	color: #fff;
 }
 
@@ -242,23 +258,41 @@ h2 {
 	font-family: 'allerbold', sans-serif;
 	font-size: 2.625em;
 	text-transform: uppercase;
-	color: #414042;
+	color: $dGray;
 	letter-spacing: 5px;
 	padding-bottom: 24px;
 }
 
+.carousel-caption {
+	position: absolute;
+	top:6em;
+	left:0;
+	width:100%;
+	height:100%;
+	padding: 15px;
+	background: none;
+	text-align: center;
+	h2 {
+		display: block;
+		width:80%;
+		margin: 0 auto;
+		font-size: 3.0625em;
+		color: #fff;
+		line-height: 1.2em;
+	}
+}
 .intro-button {
 	width: 225px;
+	margin: 3em auto 0;
 	font-family: 'allerbold', sans-serif;
-	font-size: 1.375em;
+	font-size: 1em;
 	text-transform: uppercase;
 	text-align: center;
 	letter-spacing: 5px;
-	color: #fee600;
-	background-color: #414042;
-	padding: 20px 0px 20px 0px;
-	border-radius: 5px;
-	text-shadow: 0px -1px #000;
+	color:  $dGray;
+	background-color:$yellow;
+	padding: 15px 0px;
+	border-radius: 30px;
 }
 
 p {
@@ -267,6 +301,71 @@ p {
 	line-height: 2.125em;
 	padding-bottom: 0px;
 }
+
+.carousel-control {
+  font-family: 'aller_lightregular', sans-serif;
+  position: absolute;
+  top: 40%;
+  left: 0px;
+  width: 60px;
+  height: 60px;
+  margin-top: -20px;
+  font-size: 100px;
+  font-weight: 100;
+  line-height: 45px;
+  color: $dGray;
+  text-align: center;
+  background: $yellow;
+  border: 0px solid #ffffff;
+  -webkit-border-radius: 0px;
+     -moz-border-radius: 0px;
+          border-radius: 0px;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.carousel-control.right {
+  right: 0px;
+  left: auto;
+}
+
+.carousel-control:hover {
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+
+// Pills for indicating active image
+// ---------------------------------
+
+.carousel-pill-box {
+  position: absolute;
+  bottom: 2em;
+  left: 0;
+  right: 0;
+  display: block;
+  text-align: center;
+}
+
+.carousel-pill {
+  display: inline-block;
+  margin: 0px 5px;
+  width: 10px;
+  height: 10px;
+  
+  background: black;
+
+  &.active-pill {
+    background: white;
+  }
+
+  &:hover {
+    background: gray;
+  }
+}
+//// 
+
 
 .accordion-group {
 	border-radius: 0px;
@@ -293,7 +392,7 @@ p {
 	margin: 0 auto;
 	font-family: 'allerregular', sans-serif;
 	font-size: 1em;
-	color: #414042;
+	color: $dGray;
 	text-align: center;
 	line-height: 2.125em;
 	padding: 16px 0px 16px 0px;
@@ -313,7 +412,7 @@ p {
 }
 
 #services-clients {
-	background-color: #fee600;
+	background-color: $yellow;
 }
 
 #services img {
@@ -338,7 +437,7 @@ h3 {
 	text-transform: uppercase;
 	text-align: center;
 	letter-spacing: 5px;
-	color: #414042;
+	color: $dGray;
 }
 
 .service-specific dl, menu, ol, ul {
@@ -378,7 +477,7 @@ h3 {
 .all-caps {
 	font-family: 'allerbold', sans-serif;
 	font-size: 1.375em;
-	color: #414042;
+	color: $dGray;
 	letter-spacing: 5px;
 	text-align: center;
 	text-transform: uppercase;
@@ -400,7 +499,7 @@ h3 {
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 5px;
-	color: #414042;
+	color: $dGray;
 	padding-top: 20px;
 }
 

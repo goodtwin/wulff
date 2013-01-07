@@ -102,36 +102,41 @@ h1, h3 {
   text-transform: uppercase;
   letter-spacing: 5px; }
 
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  border: 1px solid black; }
+
 /* Header Content ----------------------------------------------------------- */
 #header {
-  height: 120px;
   width: 100%;
   background-color: #414042; }
 
 #header-container {
   width: 90%;
   max-width: 960px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0.5em 0;
+  overflow: hidden; }
 
-#logo img {
+#logo {
+  width: auto;
   float: left;
-  height: 100px;
-  padding: 10px 15px 0 0; }
+  overflow: hidden; }
+  #logo img {
+    float: left;
+    height: 100px;
+    padding: 10px 15px 0 0; }
 
 #company-name {
   float: left;
-  padding: 26px 41px 0 0; }
-
-.active-item {
-  position: relative; }
-
-.active-1 {
-  position: absolute; }
+  padding: 26px 0 0; }
 
 #wulff {
   font-family: "aller_lightregular", sans-serif;
   font-size: 2em;
-  color: #fee600; }
+  color: white; }
 
 #usp {
   margin-top: -5px;
@@ -140,19 +145,24 @@ h1, h3 {
   color: #b1b3b6; }
 
 #number {
-  padding-top: 46px;
-  float: left; }
-
-#number a {
-  font-family: "allerbold", sans-serif;
-  font-size: 1.75em;
-  color: #fee600;
-  text-decoration: none; }
+  clear: right;
+  float: right;
+  padding: 0 0 1em; }
+  #number a {
+    font-family: "allerbold", sans-serif;
+    font-size: 1.75em;
+    color: #fee600;
+    text-decoration: none; }
 
 #nav {
-  padding-top: 61px; }
+  display: block;
+  overflow: hidden;
+  padding: 0.5em 0 0; }
 
 #nav ul {
+  display: block;
+  float: right;
+  clear: right;
   float: right; }
 
 #nav ul li {
@@ -174,16 +184,20 @@ h1, h3 {
   text-decoration: none; }
 
 /* Carousel Container ----------------------------------------------------------- */
-.carousel-inner {
+.welcome {
+  display: block;
+  position: absolute;
+  top: 2em;
+  left: 0;
+  z-index: 1;
   width: 100%;
-  height: 425px; }
+  text-align: center; }
+
+.carousel-inner {
+  height: 500px; }
 
 h1 {
   font-size: 1.375em;
-  color: #fff; }
-
-h2 {
-  font-size: 4.0625em;
   color: #fff; }
 
 #copy-container {
@@ -199,24 +213,91 @@ h2 {
   letter-spacing: 5px;
   padding-bottom: 24px; }
 
+.carousel-caption {
+  position: absolute;
+  top: 6em;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  background: none;
+  text-align: center; }
+  .carousel-caption h2 {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 3.0625em;
+    color: #fff;
+    line-height: 1.2em; }
+
 .intro-button {
   width: 225px;
+  margin: 3em auto 0;
   font-family: "allerbold", sans-serif;
-  font-size: 1.375em;
+  font-size: 1em;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 5px;
-  color: #fee600;
-  background-color: #414042;
-  padding: 20px 0px 20px 0px;
-  border-radius: 5px;
-  text-shadow: 0px -1px black; }
+  color: #414042;
+  background-color: #fee600;
+  padding: 15px 0px;
+  border-radius: 30px; }
 
 p {
   font-family: "aller_lightregular", sans-serif;
   font-size: 1.25em;
   line-height: 2.125em;
   padding-bottom: 0px; }
+
+.carousel-control {
+  font-family: "aller_lightregular", sans-serif;
+  position: absolute;
+  top: 40%;
+  left: 0px;
+  width: 60px;
+  height: 60px;
+  margin-top: -20px;
+  font-size: 100px;
+  font-weight: 100;
+  line-height: 45px;
+  color: #414042;
+  text-align: center;
+  background: #fee600;
+  border: 0px solid white;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  opacity: 1;
+  filter: alpha(opacity=100); }
+
+.carousel-control.right {
+  right: 0px;
+  left: auto; }
+
+.carousel-control:hover {
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.9;
+  filter: alpha(opacity=90); }
+
+.carousel-pill-box {
+  position: absolute;
+  bottom: 2em;
+  left: 0;
+  right: 0;
+  display: block;
+  text-align: center; }
+
+.carousel-pill {
+  display: inline-block;
+  margin: 0px 5px;
+  width: 10px;
+  height: 10px;
+  background: black; }
+  .carousel-pill.active-pill {
+    background: white; }
+  .carousel-pill:hover {
+    background: gray; }
 
 .accordion-group {
   border-radius: 0px;
