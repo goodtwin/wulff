@@ -132,9 +132,7 @@ h1, h3 {
 
 .container {
 	width:100%;
-	max-width: 1100px;
 	margin: 0 auto;
-	border: 1px solid $dGray;
 }
 
 /* Header Content ----------------------------------------------------------- */
@@ -262,6 +260,9 @@ h1, h3 {
 			opacity: .4;
 			filter: alpha(opacity=40);
 		}
+	img {
+		width: 100%;
+	}
 }
 
 h1 {
@@ -558,6 +559,9 @@ h3 {
 
 /* Contact Container ----------------------------------------------------------- */
 
+#contact {
+	padding: 2em 0 0;
+}
 .all-caps {
 	font-family: 'allerbold', sans-serif;
 	font-size: 1.375em;
