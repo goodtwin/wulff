@@ -219,7 +219,8 @@ h1 {
 #copy-container {
   max-width: 960px;
   width: 90%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 2em 0; }
 
 .who-we-are, .contact {
   font-family: "allerbold", sans-serif;
