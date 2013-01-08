@@ -182,18 +182,6 @@ h1, h3 {
 	color: #b1b3b6;
 }
 
-#number {
-	clear: right;
-	float: right;
-	padding: 0 0 1em;
-	a {
-		font-family: 'allerbold', sans-serif;
-		font-size: 1.75em;
-		color: $yellow;
-		text-decoration: none;
-	}
-}
-
 #nav {
 	display: block;	
 	overflow: hidden;
@@ -226,6 +214,18 @@ h1, h3 {
 #nav a {
 	color: #b1b3b6;
 	text-decoration: none;
+}
+
+#number {
+	clear: right;
+	float: right;
+	padding: 0 0 1em;
+	a {
+		font-family: 'allerbold', sans-serif;
+		font-size: 1.75em;
+		color: $yellow;
+		text-decoration: none;
+	}
 }
 
 .nav > li > a {
@@ -315,7 +315,9 @@ h1 {
 	color:  $dGray;
 	background-color:$yellow;
 	padding: 15px 0px;
-	border-radius: 30px;
+	-webkit-border-radius: 30px;
+     -moz-border-radius: 30px;
+          border-radius: 30px;
 	text-decoration: none;
 	&:hover {
 		text-decoration: none;
@@ -397,7 +399,11 @@ p {
 .accordion-group {
 	border-radius: 0px;
 	border-top: 1px solid #E5E5E5;
+	margin-bottom: 0px;
+	border: 0px solid #E5E5E5;
+	border-top: 1px solid #E5E5E5;
 }
+
 
 .accordion-heading a {
 	font-family: 'allerbold', sans-serif;
@@ -461,6 +467,9 @@ p {
      	}
 }
 
+.tab-pane {
+	padding: 1em 0 2em;
+}
 [class*="span"] {
 	display: inline-block;
 	*display:inline; /* ie7 fix */
@@ -478,11 +487,15 @@ p {
 	margin: 0;
 	font-family: 'allerregular', sans-serif;
 	font-size: 1em;
-	padding-bottom: 0px;
+	padding: 0 0 2em;
+	p {
+		margin: 0;
+	}
 }
 
 #services-clients {
 	background-color: $yellow;
+	padding: 2em 0;
 }
 
 #services img {
@@ -553,16 +566,98 @@ h3 {
 	text-transform: uppercase;
 	padding-bottom: 0;
 }
+.gray {
+	color: $lGray;
+	margin-top: -1em;
+}
+
+.contact-form {
+	display: block;
+	width:70%;
+	margin: 0 auto;
+	padding: 0 0 2em;
+
+	li {
+		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+		-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+		box-sizing: border-box;         /* Opera/IE 8+ */
+		display: block;
+		width: 100%;
+		padding: 1em 0 0;
+		overflow: hidden;
+		-webkit-border-radius: 5px;
+		       -moz-border-radius: 5px;
+		            border-radius: 5px;
+		&.contact-form-name {
+			display: inline-block;
+			vertical-align: top;
+			zoom: 1; /* Fix for IE7 */
+			*display: inline; /* Fix for IE7 */
+			width: 48%;
+			margin: 0;
+
+			&.first-name {
+				float: left;
+			}
+
+			&.last-name {
+				float: right;
+			}
+		}
+		&.submit {
+			input {
+				width: 100%;
+				&:hover {
+					background: $yellow;
+				}
+			}
+		}
+
+		label {
+			display: block;
+			width: 100%;
+			text-align: left;
+		}
+
+		input {
+			display: block;
+			width: 97%;
+			padding: .8em;
+			-webkit-border-radius: 5px;
+		       -moz-border-radius: 5px;
+		            border-radius: 5px;
+		    border: none;
+		    outline: none;
+		    background: rgb(241,242,242);
+		}
+
+		textarea {
+			display: block;
+			width: 100%;
+			min-height: 100px;
+			border: none;
+		    outline: none;
+		    background: rgb(241,242,242);
+		    box-shadow: none;
+		    padding: .5em 0;
+		    text-indent: .5em;
+		}
+	}
+}
 
 /* Footer Container ----------------------------------------------------------- */
 
 #footer {
+	overflow: hidden;
 	width: 100%;
-	height: 100px;
-	background-color: #f4f4f4;
+	background-color: $yellow;
+	text-align: center;
 }
 
 .service-bullet {
+	display: inline-block;
+	*display:inline; /* ie7 fix */
+	zoom:1; /* hasLayout ie7 trigger */
 	font-family: 'allerbold', sans-serif;
 	font-size: 1.125em;
 	font-weight: 700;
@@ -570,7 +665,7 @@ h3 {
 	text-transform: uppercase;
 	letter-spacing: 5px;
 	color: $dGray;
-	padding-top: 20px;
+	padding: 20px 12px 0px;
 }
 
 #legal {
@@ -796,6 +891,9 @@ h3 {
 	body {
 		padding-right: 0px;
 		padding-left: 0px;
+	}
+	.contact-form {
+		width:90%;
 	}
 }
 

@@ -40,9 +40,9 @@
                 <div id="nav">
                     <div id="number"><a href="#">402.498.9585</a></div>
                     <ul class="nav">
-                        <li><a href="#who-we-are">Who We Are</a></li>
-                        <li><a href="#services-clients">Our Services</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a class="scrolls" href="#who-we-are">Who We Are</a></li>
+                        <li><a class="scrolls" href="#services-clients">Our Services</a></li>
+                        <li><a class="scrolls" href="#contact">Contact Us</a></li>
                     </ul>
                 </div>              
             </div>
@@ -56,28 +56,28 @@
                 <img src="img/carousel-photo-5.jpg">
                 <div class="carousel-caption">
                     <h2>We are a full-service contracting company specializing in commercial work.</h2>
-                    <a href="#services-clients" class="intro-button">View Services</a>
+                    <a href="#services-clients" class="intro-button scrolls">View Services</a>
                 </div>
             </div>
             <div class="item" data-href="1">
                 <img src="img/carousel-photo-2.jpg">
                 <div class="carousel-caption">
                     <h2>We are a family business, locally-owned and operated here in Omaha since 2000.</h2>
-                    <a href="#who-we-are" class="intro-button">Learn More</a>
+                    <a href="#who-we-are" class="intro-button scrolls">Learn More</a>
                 </div>
             </div>
             <div class="item" data-href="2">
                 <img src="img/carousel-photo-4.jpg">
                 <div class="carousel-caption">
                     <h2>We are Master Electrician accredited and a Lighting Trade Ally with OPPD.</h2>
-                    <a href="#who-we-are" class="intro-button">Learn More</a>
+                    <a href="#who-we-are" class="intro-button scrolls">Learn More</a>
                 </div>
             </div>
             <div class="item" data-href="3">
                 <img src="img/carousel-photo-1.jpg">
                 <div class="carousel-caption">
                     <h2>We work with homeowners to ensure a maximum return on their investment.</h2>
-                    <a href="#who-we-are" class="intro-button">Learn More</a>
+                    <a href="#who-we-are" class="intro-button scrolls">Learn More</a>
                 </div>
             </div>
         </div>
@@ -129,7 +129,10 @@
                  
                 <div class="tab-content">
                     <div class="tab-pane active" id="services">
-                        <p class="customer-needs">The needs of every customer are important to us at Wulff Electric, Inc.<p class="customer-needs">These are just a few of the services we provide.</p></p> 
+                        <div class="customer-needs">
+                            <p>The needs of every customer are important to us at Wulff Electric, Inc.</p>
+                            <p>These are just a few of the services we provide.</p>
+                        </div> 
                         <div class="row">
                             <div id="commercial-container" class="span4">
                                 <div id="icon-commercial"><img src="img/serv_icon_1.png"></div>
@@ -214,15 +217,46 @@
 
         <div id="contact">           
             <h2 class="contact">Contact</h2>
-            <p class="all-caps">Wulff Electric, Inc.<p>14623 Grover Street | Omaha, NE 68144</p></p>
+            <p class="all-caps">Wulff Electric, Inc.</p>
+            <p class="gray">14623 Grover Street | Omaha, NE 68144</p>
             <p class="all-caps">24 Hour Emergency service</p>
-            <p>Office Hours</p>
-            <p class="all-caps">7am - 5pm | Monday - Friday</p>
-            <div id="contact-fields"></div>
+            <p class="all-caps">Office Hours</p>
+            <p class="gray">7am - 5pm | Monday - Friday</p>
+            <div id="contact-fields">
+                <form name="contactform" method="post" action="contact.php">
+                    <ul class="contact-form">
+                        <li class="contact-form-name first-name">
+                            <label for="f_name">First Name</label>
+                            <input id="f_name">
+                        </li>
+                        <li class="contact-form-name last-name">
+                            <label for="l_name">Last Name</label>
+                            <input id="l_name">
+                        </li>
+                        <li class="contact-form-email">
+                            <label for="email">Email</label>
+                            <input id="email" placeholder="ex: myname@example.com">
+                        </li>
+                        <li class="contact-form-phone">
+                            <label for="phone">Phone Number</label>
+                            <input id="phone">
+                        </li>
+                        <li class="contact-form-comment">
+                            <label for="comment">Comment</label>
+                            <textarea id="comment"></textarea>
+                        </li>
+                        <li class="submit">
+                            <input type="submit"value="Submit">
+                        </li>
+                    </ul>
+                </form>
+            </div>
         </div>
 
         <div id="footer">
-            <p class="service-bullet">New Construction  |  Remodel  |  Service Calls</p>
+            <p class="service-bullet">New Construction</p>     
+            <p class="service-bullet">Remodel</p>      
+            <p class="service-bullet">Service Calls</p>
             <p id="legal">Wulff Electric, Inc. | 14623 Grover Street, Omaha NE | 402.498.9585 | All Rights Reserved</p>
         </div>
 

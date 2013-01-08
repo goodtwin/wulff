@@ -18,7 +18,7 @@
 			function OxideSlider(id){
 				$('html,body').animate({scrollTop: $(id).offset().top-buffer+'px'}, 'slow');
 			}
-			$('a').click(function(e) {
+			$('.scrolls').click(function(e) {
 				href = $(this).attr('href');
 				pos = href.indexOf('#');
 				hash = href.substring(pos);

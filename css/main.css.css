@@ -144,16 +144,6 @@ h1, h3 {
   font-size: 1em;
   color: #b1b3b6; }
 
-#number {
-  clear: right;
-  float: right;
-  padding: 0 0 1em; }
-  #number a {
-    font-family: "allerbold", sans-serif;
-    font-size: 1.75em;
-    color: #fee600;
-    text-decoration: none; }
-
 #nav {
   display: block;
   overflow: hidden;
@@ -181,6 +171,16 @@ h1, h3 {
 #nav a {
   color: #b1b3b6;
   text-decoration: none; }
+
+#number {
+  clear: right;
+  float: right;
+  padding: 0 0 1em; }
+  #number a {
+    font-family: "allerbold", sans-serif;
+    font-size: 1.75em;
+    color: #fee600;
+    text-decoration: none; }
 
 .nav > li > a:hover {
   background: none; }
@@ -259,6 +259,8 @@ h1 {
   color: #414042;
   background-color: #fee600;
   padding: 15px 0px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
   border-radius: 30px;
   text-decoration: none; }
   .intro-button:hover {
@@ -327,6 +329,9 @@ p {
 
 .accordion-group {
   border-radius: 0px;
+  border-top: 1px solid #e5e5e5;
+  margin-bottom: 0px;
+  border: 0px solid #e5e5e5;
   border-top: 1px solid #e5e5e5; }
 
 .accordion-heading a {
@@ -380,6 +385,9 @@ p {
       background: white;
       color: #414042; }
 
+.tab-pane {
+  padding: 1em 0 2em; }
+
 [class*="span"] {
   display: inline-block;
   *display: inline;
@@ -398,10 +406,13 @@ p {
   margin: 0;
   font-family: "allerregular", sans-serif;
   font-size: 1em;
-  padding-bottom: 0px; }
+  padding: 0 0 2em; }
+  .customer-needs p {
+    margin: 0; }
 
 #services-clients {
-  background-color: #fee600; }
+  background-color: #fee600;
+  padding: 2em 0; }
 
 #services img {
   padding-bottom: 10px; }
@@ -453,13 +464,84 @@ h3 {
   text-transform: uppercase;
   padding-bottom: 0; }
 
+.gray {
+  color: #c7c8ca;
+  margin-top: -1em; }
+
+.contact-form {
+  display: block;
+  width: 70%;
+  margin: 0 auto;
+  padding: 0 0 2em; }
+  .contact-form li {
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* Opera/IE 8+ */
+    display: block;
+    width: 100%;
+    padding: 1em 0 0;
+    overflow: hidden;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px; }
+    .contact-form li.contact-form-name {
+      display: inline-block;
+      vertical-align: top;
+      zoom: 1;
+      /* Fix for IE7 */
+      *display: inline;
+      /* Fix for IE7 */
+      width: 48%;
+      margin: 0; }
+      .contact-form li.contact-form-name.first-name {
+        float: left; }
+      .contact-form li.contact-form-name.last-name {
+        float: right; }
+    .contact-form li.submit input {
+      width: 100%; }
+      .contact-form li.submit input:hover {
+        background: #fee600; }
+    .contact-form li label {
+      display: block;
+      width: 100%;
+      text-align: left; }
+    .contact-form li input {
+      display: block;
+      width: 97%;
+      padding: .8em;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+      background: #f1f2f2; }
+    .contact-form li textarea {
+      display: block;
+      width: 100%;
+      min-height: 100px;
+      border: none;
+      outline: none;
+      background: #f1f2f2;
+      box-shadow: none;
+      padding: 0.5em 0;
+      text-indent: .5em; }
+
 /* Footer Container ----------------------------------------------------------- */
 #footer {
+  overflow: hidden;
   width: 100%;
-  height: 100px;
-  background-color: #f4f4f4; }
+  background-color: #fee600;
+  text-align: center; }
 
 .service-bullet {
+  display: inline-block;
+  *display: inline;
+  /* ie7 fix */
+  zoom: 1;
+  /* hasLayout ie7 trigger */
   font-family: "allerbold", sans-serif;
   font-size: 1.125em;
   font-weight: 700;
@@ -467,7 +549,7 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 5px;
   color: #414042;
-  padding-top: 20px; }
+  padding: 20px 12px 0px; }
 
 #legal {
   font-family: "allerbold", sans-serif;
@@ -643,7 +725,10 @@ h3 {
 @media (max-width: 767px) {
   body {
     padding-right: 0px;
-    padding-left: 0px; } }
+    padding-left: 0px; }
+
+  .contact-form {
+    width: 90%; } }
 @media (max-width: 780px) {
   #header-container {
     text-align: center; }
