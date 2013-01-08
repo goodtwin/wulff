@@ -13,6 +13,20 @@
 					.appendTo( carouselPillBox );
 			};
 			$('.carousel-pill[data-href="0"]').addClass('active-pill');
+
+			var href, pos, hash, buffer = 0;
+			function OxideSlider(id){
+				$('html,body').animate({scrollTop: $(id).offset().top-buffer+'px'}, 'slow');
+			}
+			$('a').click(function(e) {
+				href = $(this).attr('href');
+				pos = href.indexOf('#');
+				hash = href.substring(pos);
+				if ( pos !== -1 && hash.length > 1 && $(hash).length > 0 ) {
+					e.preventDefault();
+					OxideSlider(hash);
+				}
+			});
 		})
 		.on( 'click', '.carousel-pill', function( e ){
 	        e.preventDefault();

@@ -26,4 +26,4 @@ $('.carousel').carousel()
 $('.carousel').bind('slid', function(){
     var nowAt =  $('.item.active').attr('data-href');
     $('.carousel-pill[data-href="' + nowAt + '"]').addClass('active-pill').siblings().removeClass('active-pill');
-  })
+})
