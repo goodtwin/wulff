@@ -22,7 +22,9 @@
 }());
 
 // Place any jQuery/helper plugins in here.
-$('.carousel').carousel()
+$('.carousel').carousel({
+  interval: 8000
+})
 $('.carousel').bind('slid', function(){
     var nowAt =  $('.item.active').attr('data-href');
     $('.carousel-pill[data-href="' + nowAt + '"]').addClass('active-pill').siblings().removeClass('active-pill');
