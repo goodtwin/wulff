@@ -417,7 +417,7 @@ p {
 }
 
 .accordion-inner {
-	background-color: #333;
+	background: url(../img/accordion-pattern.jpg);
 	border-top: 0px;
 }
 
@@ -445,11 +445,12 @@ p {
 	     margin-top: 1em;
 	     border-bottom: 0px;
 	     a {
-	     	padding: 30px;
-	     	font-family: 'allerregular', sans-serif;
+	     	padding: 30px 30px 40px;
+	     	font-family: 'allerbold', sans-serif;
 	     	font-size: 50px;
 	     	text-transform: uppercase;
 	     	background: none;
+	     	letter-spacing: 5px;
 	     	&:hover {
 	     		background: white;
 	     		color: $dGray;
@@ -496,7 +497,7 @@ p {
 }
 
 #services-clients {
-	background-color: $yellow;
+	background: url(../img/services-clients_pattern.jpg);
 	padding: 2em 0;
 }
 
@@ -561,6 +562,11 @@ h3 {
 
 #contact {
 	padding: 2em 0 0;
+}
+
+#map {
+	height: 485px;
+	overflow: hidden;
 }
 .all-caps {
 	font-family: 'allerbold', sans-serif;
@@ -954,4 +960,10 @@ h3 {
 			max-width:none;
 		}
 	}
+	
 }
+@media (max-height: 500px) {
+		#map {
+			height:200px;
+		}
+	}

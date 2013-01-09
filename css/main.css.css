@@ -344,7 +344,7 @@ p {
   text-decoration: none; }
 
 .accordion-inner {
-  background-color: #333;
+  background: url(../img/accordion-pattern.jpg);
   border-top: 0px; }
 
 .accordion-type {
@@ -371,11 +371,12 @@ p {
     margin-top: 1em;
     border-bottom: 0px; }
     .nav-tabs > li a, .nav-pills > li a {
-      padding: 30px;
-      font-family: "allerregular", sans-serif;
+      padding: 30px 30px 40px;
+      font-family: "allerbold", sans-serif;
       font-size: 50px;
       text-transform: uppercase;
-      background: none; }
+      background: none;
+      letter-spacing: 5px; }
       .nav-tabs > li a:hover, .nav-pills > li a:hover {
         background: white;
         color: #414042; }
@@ -412,7 +413,7 @@ p {
     margin: 0; }
 
 #services-clients {
-  background-color: #fee600;
+  background: url(../img/services-clients_pattern.jpg);
   padding: 2em 0; }
 
 #services img {
@@ -458,6 +459,10 @@ h3 {
 /* Contact Container ----------------------------------------------------------- */
 #contact {
   padding: 2em 0 0; }
+
+#map {
+  height: 485px;
+  overflow: hidden; }
 
 .all-caps {
   font-family: "allerbold", sans-serif;
@@ -777,3 +782,6 @@ h3 {
       height: 100%;
       width: auto;
       max-width: none; } }
+@media (max-height: 500px) {
+  #map {
+    height: 200px; } }
