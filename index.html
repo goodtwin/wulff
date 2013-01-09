@@ -224,30 +224,31 @@
             <p class="all-caps">Office Hours</p>
             <p class="gray">7am - 5pm | Monday - Friday</p>
             <div id="contact-fields">
-                <form name="contactform" method="post" action="contact.php">
+                <form name="contactform" id="contactform" method="post">
                     <ul class="contact-form">
                         <li class="contact-form-name first-name">
                             <label for="f_name">First Name</label>
-                            <input id="f_name">
+                            <input id="f_name" />
                         </li>
                         <li class="contact-form-name last-name">
                             <label for="l_name">Last Name</label>
-                            <input id="l_name">
+                            <input id="l_name" />
                         </li>
                         <li class="contact-form-email">
                             <label for="email">Email</label>
-                            <input id="email" placeholder="ex: myname@example.com">
+                            <input id="email" placeholder="ex: myname@example.com" />
                         </li>
                         <li class="contact-form-phone">
                             <label for="phone">Phone Number</label>
-                            <input id="phone">
+                            <input id="phone" />
                         </li>
                         <li class="contact-form-comment">
                             <label for="comment">Comment</label>
                             <textarea id="comment"></textarea>
                         </li>
                         <li class="submit">
-                            <input type="submit"value="Submit">
+                            <input id="#submit" type="submit"value="Submit" />
+                            <div id="success" style="color: red;"></div>
                         </li>
                     </ul>
                 </form>

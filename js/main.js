@@ -1,4 +1,17 @@
 (function() {
+	$(document).ready(function(){
+ 
+		$('#submit').click(function(e){
+		 e.preventDefault()
+		$.post("contact.php", $("#contactform").serialize(),  function(response) {
+		$('#success').html(response);
+		//$('#success').hide('slow');
+		});
+		return false;
+		 
+		});
+	 
+	});
 	$(document)
 		.ready(function(){
 			var numItems = $( '.item' ).length,
