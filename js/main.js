@@ -1,17 +1,4 @@
 (function() {
-	$(document).ready(function(){
- 
-		$('#submit').click(function(e){
-		 e.preventDefault()
-		$.post("contact.php", $("#contactform").serialize(),  function(response) {
-		$('#success').html(response);
-		//$('#success').hide('slow');
-		});
-		return false;
-		 
-		});
-	 
-	});
 	$(document)
 		.ready(function(){
 			var numItems = $( '.item' ).length,
@@ -53,6 +40,30 @@
 		  e.preventDefault();
 		  $(this).tab('show');
 		})
+
+		form = $('#contactform');
+		response = $('.response');
+		form.submit(function(){  
+		$.ajax({
+		  type: "POST",
+		  url: "postForm.ajax.php",
+		  dataType: "json",
+		  data: form.serialize(),
+		  
+		  success: function(msg){
+		    form.each(function() {
+		      this.reset();
+		    });
+		    response.html(msg.message);
+
+		  },
+		  error: function(msg){
+		    response.html("Oops. Something isn't right. Please try that again.");
+		  }
+		});
+
+		return false;
+		});
 
 }());
 
