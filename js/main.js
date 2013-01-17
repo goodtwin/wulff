@@ -1,7 +1,7 @@
 (function() {
 	$(document)
 		.ready(function(){
-			var numItems = $( '.item' ).length,
+			var numItems = $( '#wulffCarousel .item' ).length,
 				carouselPillBox = $('<nav />', { //don't use <div>. bootstrap will treat is as an 'item'.
 					'class' : 'carousel-pill-box'})
 					.appendTo( '#wulffCarousel' );			
@@ -32,7 +32,7 @@
 	        e.preventDefault();
 	        var goTo = Number($( this ).attr( 'data-href' ));
 	        console.log(goTo);
-	        $( '.carousel' ).carousel(goTo);
+	        $( '#wulffCarousel' ).carousel(goTo);
 	        $(this).addClass('active-pill').siblings().removeClass('active-pill');
 	    });
 

@@ -69,10 +69,10 @@ if(empty($_POST['f_name'])){
 } else {
 	
 	//send the email
-	$to = "thompson.glowe@gmail.com";
+	$to = "roger@wulffelectricinc.com";
 	$subject = "Web Contact Form";
-	$message = $_POST['f_name'] . $_POST['l_name'] . " sent you a message\n\n";
-	$message .= "Details:" . $_POST['message'];
+	$message = $_POST['f_name'] . " " . $_POST['l_name'] . " sent you a message\n\n";
+	$message .= "Details: " . $_POST['message'];
 	$message .= "\n\n How to reach them: " . $_POST['email'] . " or " . $_POST['phone'];
 	mail($to,$subject,$message); 
 

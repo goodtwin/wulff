@@ -102,14 +102,22 @@ h1, h3 {
   text-transform: uppercase;
   letter-spacing: 5px; }
 
+.blue {
+  color: #0001fb; }
+
+.green {
+  color: #399532; }
+
+.purple {
+  color: #900596; }
+
 .container {
   width: 100%;
   margin: 0 auto; }
 
 /* Header Content ----------------------------------------------------------- */
 #header {
-  width: 100%;
-  background-color: #414042; }
+  width: 100%; }
 
 #header-container {
   width: 90%;
@@ -124,8 +132,8 @@ h1, h3 {
   overflow: hidden; }
   #logo img {
     float: left;
-    height: 100px;
-    padding: 10px 15px 0 0; }
+    height: 120px;
+    padding: 10px 0 0; }
 
 #company-name {
   float: left;
@@ -136,16 +144,18 @@ h1, h3 {
   font-size: 2em;
   color: white; }
 
-#usp {
-  margin-top: -5px;
-  font-family: "alleritalic", sans-serif;
-  font-size: 1em;
-  color: #b1b3b6; }
+.family-owned {
+  font-size: 1.2em;
+  display: block;
+  background-color: #414042;
+  color: white;
+  text-align: center;
+  margin: 0px; }
 
 #nav {
   display: block;
   overflow: hidden;
-  padding: 0.5em 0 0; }
+  padding: 1.75em 0 0; }
 
 #nav ul {
   display: block;
@@ -167,7 +177,7 @@ h1, h3 {
   margin: 0px; }
 
 #nav a {
-  color: #b1b3b6;
+  color: #900596;
   text-decoration: none; }
 
 #number {
@@ -177,7 +187,7 @@ h1, h3 {
   #number a {
     font-family: "allerbold", sans-serif;
     font-size: 1.75em;
-    color: #fee600;
+    color: #414042;
     text-decoration: none; }
 
 .nav > li > a:hover {
@@ -193,7 +203,7 @@ h1, h3 {
   width: 100%;
   text-align: center; }
 
-.carousel-inner {
+#wulffCarousel .carousel-inner {
   height: 500px; }
 
 .item {
@@ -212,6 +222,21 @@ h1, h3 {
   .item img {
     width: 100%; }
 
+#photoCarousel .carousel-inner {
+  height: auto;
+  max-height: 200px; }
+#photoCarousel .item img {
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  /* Fix for IE7 */
+  *display: inline;
+  /* Fix for IE7 */
+  float: left;
+  padding: 0px;
+  margin: 0px;
+  width: 25%; }
+
 h1 {
   font-size: 1.375em;
   color: #fff; }
@@ -220,7 +245,8 @@ h1 {
   max-width: 960px;
   width: 90%;
   margin: 0 auto;
-  padding: 2em 0; }
+  padding: 2em 0;
+  text-align: center; }
 
 .who-we-are, .contact {
   font-family: "allerbold", sans-serif;
@@ -341,7 +367,8 @@ p {
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 5px;
-  text-decoration: none; }
+  text-decoration: none;
+  background-color: #eeefef; }
 
 .accordion-inner {
   background: url(../img/accordion-pattern.jpg);
@@ -413,7 +440,7 @@ p {
     margin: 0; }
 
 #services-clients {
-  background: url(../img/services-clients_pattern.jpg);
+  background-color: #c7c8ca;
   padding: 2em 0; }
 
 #services img {
